@@ -469,7 +469,7 @@ section{
 }
 
 #skills .container .skillsdescription{
-    text-align: center;
+    text-align: justify;
     align-items: center;
     font-size: 2rem;
     color: var(--primary-color);
