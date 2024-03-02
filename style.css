@@ -546,7 +546,7 @@ section{
 
 #projects .container .projectsdescription{
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     margin-bottom: -5rem;
     font-size: 2rem;
     color: var(--primary-color);
@@ -707,17 +707,18 @@ section{
 
 
 /* Making Experiences Section */
-#experiences{
+#experience{
     padding: 20rem 0;
-    margin-top: -200px;
-    text-align: center;
+    /* margin-bottom: 100px; */
 }
 
-#experiences .container .Sectionheading{
-    max-width: 1000px;
+#experience .container .Sectionheading{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
 }
 
-#experiences .container .Sectionheading .wrapper{
+#experience .container .Sectionheading .wrapper{
     font-size: 6rem;
     font-weight:700;
     font-family: 'DM Sans';
@@ -725,67 +726,165 @@ section{
     justify-content: center;
 }
 
-#experiences .container .experience-title{
+#experience .container .experiencedescription{
+    justify-content: center;
+    text-align: justify;
+    margin-bottom: -5rem;
     font-size: 2rem;
-    font-weight:500;
+    color: var(--primary-color);
+}   
+
+
+#experience .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#experience .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+}
+
+#experience .all-items{
+    margin-top: 10rem;
+}
+
+
+#experience .item:nth-child(even){
+    flex-direction: column;
+}
+
+#experience .item .left{
+    flex: 1;
+}
+
+#experience .item .right{
+    flex: 1;
+    background-color: white;
+    padding: 5rem 5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    z-index: 2;
+}
+
+#experience .item:nth-child(even) .right{
+    margin-left: 0px;
+}
+
+
+
+#experience .item .left .image{
+    /* height: 500px; */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgb(156,156,156);
+    position: relative;
+}
+
+#experience .item .left .image::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#experience .item .left .image img{
+    object-fit: cover;
+    max-width: 1000px;
+    padding: 10px;
+}
+
+#experience .item:hover .left .image img{
+    /* transform: scale(1.1); */
+    transform: scale(1.02);
+    z-index: 1;
+    transition: 1.3s ease transform;
+} 
+
+#experience .item .right .company-name{
+    font-size: 2.5rem;
     font-family: 'DM Sans', sans-serif;
-    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+#experience .item .right .company-desc{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+#experience .item .right .job-desc{
+    font-family: 1rem;
+    color: var(--secondary-gray);
+    margin-bottom: 3rem;
+}
+
+#experience .item .right .buttons .external{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(221, 221, 221);
 }
 
 
-#experiences .container .experience-subtitle{
-    margin-bottom: 5rem;
-    font-size: 1.3rem;
+#experience .item .right .buttons .external svg{
+    width: 17px;
 }
 
-
-#experiences .container .allexperiences{
-    flex-grow: 1;
-}
-
-#experiences .container .groupexperiences{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    min-height: 100%;
-    gap: 3em;
-}
 
 @media screen and (max-width:768px) {
 
-    #experiences .container .experience-title{
-        margin-top: 5rem;
+    #experience .item{
+        flex-direction: column;
     }
 
-    #experiences .container .experience-subtitle{
-        margin-bottom: 2rem;
+    #experience .item .left{
+        width: 100%;
+    }
+
+    #experience .item .right{
+        width: 90%;
+        margin-left: 0;
+        margin-top: -50px;
     }
     
+    #experience .item:nth-child(even){
+        flex-direction: column;
+    }
 
-    #experiences .container .Sectionheading .wrapper{
+    #experience .item:nth-child(even) .left{
+        margin-left: 0;
+    }
+
+    #experience .container .Sectionheading .wrapper{
         text-align: center;
         justify-content: center;
         font-size: 4rem;
     }  
 
-    #experiences .container .allexperiences{
-        flex-direction: column;
-        justify-content: center;
-    }
+}
 
-    #experiences .container .groupexperiences{
-        margin-bottom: -70px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1rem;
-    }
 
-    #experiences .container .experience{
+@media screen and (max-width: 450px){
+    #experience .item .buttons{
+        flex-direction: column-reverse;
+    }
+    #experience .item .buttons a{
+        width: 100%;
         text-align: center;
     }
-
 }
+
 /* End Experiences Section */
 
 
