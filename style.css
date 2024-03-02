@@ -706,6 +706,89 @@ section{
 /* End Projects Section */
 
 
+/* Making Experiences Section */
+#experiences{
+    padding: 20rem 0;
+    margin-top: -200px;
+    text-align: center;
+}
+
+#experiences .container .Sectionheading{
+    max-width: 1000px;
+}
+
+#experiences .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#experiences .container .experience-title{
+    font-size: 2rem;
+    font-weight:500;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 5rem;
+}
+
+
+#experiences .container .experience-subtitle{
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+}
+
+
+#experiences .container .allexperiences{
+    flex-grow: 1;
+}
+
+#experiences .container .groupexperiences{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    min-height: 100%;
+    gap: 3em;
+}
+
+@media screen and (max-width:768px) {
+
+    #experiences .container .experience-title{
+        margin-top: 5rem;
+    }
+
+    #experiences .container .experience-subtitle{
+        margin-bottom: 2rem;
+    }
+    
+
+    #experiences .container .Sectionheading .wrapper{
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+    }  
+
+    #experiences .container .allexperiences{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #experiences .container .groupexperiences{
+        margin-bottom: -70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    #experiences .container .experience{
+        text-align: center;
+    }
+
+}
+/* End Experiences Section */
+
+
 /* Making Footer Section */
 #footer{
     /* margin-top: 170px; */
@@ -1341,5 +1424,3 @@ section{
     from {opacity: .5}
     to {opacity: 2}
   }
-
-
